@@ -1,6 +1,6 @@
 # docker-ansible-demo
 
-[Live] demo to illustrate basic automation tasks. The idea is simple - we want to use `Ansible` to config a few nodes, run code on them, and then patch that code.
+[Live] demo to illustrate basic automation tasks. The idea is simple - we want to use `Ansible` to configure a few nodes, run code on them, and then patch that code.
 
 **DISCLAIMER** The setup in this repository does some pretty dumb things and should not be used for more than just education.
 
@@ -45,4 +45,4 @@ The playbooks are numbered, and should be executed in that order. They do the fo
 4) starts the webapp
 5) deploys v2 of our webapp
 
-Once playbook 04 is executed you can navigate to localhost:1333[7/8/9] to see the `Hello World` example taken from `Flask's` quick start. After playbook 05 is executed, refreshing your [age will reveal the v2 webapp. The code that is running is a basic `Flask` webapp with the development environment. This is purely to simulate the deployment of live code to a server and is not meant to be a realistic use case for `Flask's` development environment.
+Once playbook 04 is executed you can navigate to localhost:1333[7/8/9] to see the `Hello World` example taken from `Flask's` quick start. After playbook 05 is executed, refreshing your page will reveal the v2 webapp. The code that is running is a basic `Flask` webapp with the development environment. This is purely to simulate the deployment of live code to a server and is not meant to be a realistic use case for `Flask's` development environment.
