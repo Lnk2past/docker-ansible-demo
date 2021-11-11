@@ -1,0 +1,7 @@
+---
+- hosts: all
+  tasks:
+    - name: deploy v2
+      ansible.builtin.copy:
+        src: /root/flask_app_v2/hello.py
+        dest: /root/flask_app/hello.py

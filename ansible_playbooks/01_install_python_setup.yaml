@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+    - name: install pip
+      apk:
+        name: py3-pip
+    - name: install setuptools package
+      apk:
+        name: py3-setuptools
+    - name: install virtualenv package
+      apk:
+        name: py3-virtualenv

@@ -1,0 +1,28 @@
+---
+- hosts: node1
+  tasks:
+  - name: start flask
+    shell: "nohup flask run --host 0.0.0.0 --port 13337 > out.txt 2>&1 &"
+    async: True
+    poll: 0
+    environment:
+      FLASK_APP: /root/flask_app/hello.py
+      FLASK_ENV: development
+- hosts: node2
+  tasks:
+  - name: start flask
+    shell: "nohup flask run --host 0.0.0.0 --port 13338 > out.txt 2>&1 &"
+    async: True
+    poll: 0
+    environment:
+      FLASK_APP: /root/flask_app/hello.py
+      FLASK_ENV: development
+- hosts: node3
+  tasks:
+  - name: start flask
+    shell: "nohup flask run --host 0.0.0.0 --port 13339 > out.txt 2>&1 &"
+    async: True
+    poll: 0
+    environment:
+      FLASK_APP: /root/flask_app/hello.py
+      FLASK_ENV: development

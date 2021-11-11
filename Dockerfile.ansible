@@ -1,0 +1,11 @@
+FROM my-alpine
+
+RUN apk --update add --no-cache ansible && rm /usr/bin/python && ln -s /usr/bin/python3 /usr/bin/python
+RUN mkdir /etc/ansible && echo $'node1\nnode2\nnode3' > /etc/ansible/hosts
+COPY get_known_hosts.sh /
+COPY ansible_playbooks /root/ansible_playbooks
+COPY flask_app_v1 /root/flask_app_v1
+COPY flask_app_v2 /root/flask_app_v2
+RUN chmod 755 get_known_hosts.sh
+EXPOSE 22
+WORKDIR /root

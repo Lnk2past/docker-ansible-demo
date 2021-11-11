@@ -1,0 +1,6 @@
+---
+- hosts: all
+  tasks:
+    - name: install flask
+      pip:
+        name: flask

@@ -1,0 +1,18 @@
+services:
+  node1:
+    image: my-alpine
+    ports:
+      - "13337:13337"
+  node2:
+    image: my-alpine
+    ports:
+      - "13338:13338"
+  node3:
+    image: my-alpine
+    ports:
+      - "13339:13339"
+  ansible:
+    image: my-ansible
+    ports:
+      - "13340:13340"
+    command: sh -c "/get_known_hosts.sh && /usr/sbin/sshd -D"
